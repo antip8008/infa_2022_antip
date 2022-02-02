@@ -2,7 +2,6 @@ import pygame
 from pygame.draw import *
 from random import randint
 from math import sin, cos
-import time
 
 points = 0
 sec = 0
