@@ -7,11 +7,11 @@ points = 0
 sec = 0
 
 screen = pygame.display.set_mode((1350, 700))
-pygame.display.set_caption(' Game: Bolls')
+pygame.display.set_caption(' Game: Balls')
 
 pygame.init()
 
-SEC = 10   # время игры в секундах
+SEC = 60   # время игры в секундах
 FPS = 90
 
 FRAME_LIMIT = SEC * FPS   # лимит фреймов
