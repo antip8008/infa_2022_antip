@@ -14,7 +14,7 @@ def run():
     screen = pygame.display.set_mode((600, 690))
     pygame.display.set_caption('F1')
     pygame.mixer.music.load('sound/F1trek.mp3')
-    #pygame.mixer.music.play(-1)
+    pygame.mixer.music.play(-1)
     bg_color = (158, 158, 158)
     bollid = Bollid(screen)
     cherts = Group()

@@ -3,12 +3,11 @@ import time
 import pygame
 from os import path
 
-class Bollid(pygame.sprite.Sprite):
 
+class Bollid(pygame.sprite.Sprite):
     speed: int = 0
     accelerate = 0
     fr: int = 0
-
 
     def __init__(self, screen):
         """инициализация гонки"""
@@ -19,7 +18,7 @@ class Bollid(pygame.sprite.Sprite):
         self.rect = self.imege.get_rect()
         self.screen_rect = screen.get_rect()
         self.rect.centerx = self.screen_rect.centerx
-        self.rect.bottom = self.screen_rect.bottom
+        self.rect.bottom = self.screen_rect.bottom-50
 
         self.explosion_anim = []
         img_dir = path.join(path.dirname(__file__), 'imege')
@@ -54,16 +53,12 @@ class Bollid(pygame.sprite.Sprite):
         self.speed = 0
         self.explosion = -1
 
-
     def draw_pizdets(self):
         if self.explosion < len(self.explosion_anim) - 1:
             self.explosion += 1
             self.imege = self.explosion_anim[self.explosion]
         else:
             self.restart()
-
-    def screen(self):
-        return self.s
 
 
 class Enemy(pygame.sprite.Sprite):
